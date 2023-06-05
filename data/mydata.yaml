@@ -1,0 +1,9 @@
+train: C:/Users/msi/Desktop/dataset/train.txt
+val: C:/Users/msi/Desktop/dataset/valid.txt
+test: C:/Users/msi/Desktop/dataset/test.txt
+
+# number of classes
+nc: 1
+
+# class names
+names: [ 'phone' ]
