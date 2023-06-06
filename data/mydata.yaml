@@ -1,5 +1,5 @@
-train: C:/Users/msi/Desktop/dataset/train.txt
-val: C:/Users/msi/Desktop/dataset/valid.txt
+train: /root/zxy/dataset/train.txt
+val: /root/zxy/dataset/valid.txt
 
 # number of classes
 nc: 1
