@@ -1,5 +1,5 @@
-train: /content/drive/MyDrive/dataset/train.txt
-val: /content/drive/MyDrive/dataset/valid.txt
+train: C:/Users/msi/Desktop/dataset/train.txt
+val: C:/Users/msi/Desktop/dataset/valid.txt
 
 # number of classes
 nc: 1

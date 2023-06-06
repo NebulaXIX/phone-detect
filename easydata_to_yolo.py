@@ -13,7 +13,7 @@ def easydata_to_voc(dataroot):
     os.mkdir(dataroot + '/images')
     os.mkdir(dataroot + '/annotations')
     os.mkdir(dataroot + '/jsons')
-    os.mkdir(dataroot+"/labels")
+    os.mkdir(dataroot + "/labels")
     images_path = os.path.join(dataroot, 'images')
     annotations_path = os.path.join(dataroot, 'annotations')
     jsons_path = os.path.join(dataroot, 'jsons')
@@ -103,8 +103,8 @@ def convert_annotation(xml_file, class_id, voc_folder, yolo_folder):
     w = int(size.find('width').text)
     h = int(size.find('height').text)
     for obj in root.iter('object'):
-        cls = obj.find('name').text
-        cls_id = class_id.index(cls)
+        # cls = obj.find('name').text
+        cls_id = 0
         xmlbox = obj.find('bndbox')
         b = (float(xmlbox.find('xmin').text),
              float(xmlbox.find('xmax').text),
@@ -121,7 +121,7 @@ def voc_to_yolo(voc_folder, yolo_folder, class_id):
 
 
 if __name__ == '__main__':
-    DATAROOT = 'C:\\Users\\msi\\Desktop\\手机验证集V2\\1854179_99_1686024983'
-    easydata_to_voc(DATAROOT)
+    DATAROOT = 'C:\\Users\\msi\\Desktop\\DatasetId_1854179_1686033150\\DatasetId_1854179_1686033150'
+    # easydata_to_voc(DATAROOT)
     voc_to_yolo(DATAROOT + '\\annotations',
                 DATAROOT + '\\labels', ['phone'])
